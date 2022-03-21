@@ -8,7 +8,9 @@
  * @copyright Copyright (c) 2022
  * 
  */
-
+ 
+#ifndef __UNIT_CONVERSIONS_H__
+#define __UNIT_CONVERSIONS_H__
 #include <stdio.h>
 
 /**
