@@ -1,0 +1,75 @@
+# Name of the project
+PROJECT_NAME =  Unit conversions
+
+# Output directory
+BUILD = build
+
+# All source code files
+SRC = PROJECTMAIN.c\
+src/SRC.c
+
+# All test source files
+TEST_SRC = src/unit conversions.c\
+test/test.c\
+
+
+TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
+
+# All include folders with header files
+INC	= -Iinc\
+#Library Inlcudes
+#INCLUDE_LIBS
+
+
+# Project Output name
+PROJECT_OUTPUT = $(BUILD)/$(UC).out
+
+# Document files
+DOCUMENTATION_OUTPUT = documentation/html
+
+# Default target built
+$(UNIT_CONVERSIONS):all
+
+# Run the target even if the matching name exists
+.PHONY: run clean test doc all
+
+all: $(SRC) $(BUILD)
+	gcc $(SRC) $(INC) -o $(UC).out
+
+# Call `make run` to run the application
+run:$(UNIT_CONVERSIONS)
+	./$(UC).out
+
+# Document the code using Doxygen
+doc:
+	make -C ./documentation
+
+# Build and run the unit tests
+test:$(BUILD)
+	gcc $(TEST_SRC) $(INC) -o $(UC.OUT) $(INCLUDE_LIBS)
+	./$(UC.OUT)
+
+analyze: test memcheck staticcheck coverage sanitize_check
+
+staticcheck:
+	cppcheck --enable=all -iunity .
+
+memcheck:
+	valgrind ./$(UC.OUT)
+
+sanitize_check:
+	gcc -fsanitize=address -fno-omit-frame-pointer $(TEST_SRC) $(INC) -o $(TEST_OUTPUT) $(INCLUDE_LIBS)
+	./$(uc.out)
+
+coverage:$(SRC.C)
+	gcc -fprofile-arcs -ftest-coverage $(TEST_SRC) $(INC) -o $(TEST_OUTPUT) $(INCLUDE_LIBS)
+	./$(TEST_OUTPUT)
+	gcov -a UNIT_CONVERSIONS.c
+
+# Remove all the built files, invoke by `make clean`
+clean:
+	rm -rf $(BUILD) $(DOCUMENTATION_OUTPUT) *.gcda *.gcno *.gcov
+
+# Create new build folder if not present
+$(BUILD):
+	mkdir build
