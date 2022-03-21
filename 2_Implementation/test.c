@@ -1,9 +1,15 @@
-//UNIT CONVERSIONS:
+
+#include "inc.h"
+#include <unit_conversions.h>
 #include <stdio.h>
 int main() 
+  
+  
 /* addind datatypes and their values */
 
 /* starts here*/
+  
+
 {
   char category;
   float VolumeChoice;
@@ -27,6 +33,7 @@ int main()
   printf("Please enter any of the above mentioned letter that you want to convert.\n");
   scanf("%c",&category);
  
+  
  
 /* It will proceed further only if we choose the category  [V/T/E]
 After choosing the catogory we are supposed to give the user input (int/float) value.
