@@ -4,7 +4,7 @@
 int main() 
 {
   char category;
-  int n, *ptr;
+  double n, *ptr;
   float VolumeChoice;
   float TimeChoice;
   float EnergyChoice;
@@ -35,7 +35,7 @@ int main()
       if(VolumeChoice == 1){
           printf("Please enter the Militre value you want to convert: \n");
           scanf("%f",&userinputml);
-          ptr = (int*) malloc(n * sizeof(int));
+          double *ptr = (double*) malloc(n * sizeof(double*));
           if(ptr == NULL)
           {
               printf("Error! memory not allocated.");
@@ -51,7 +51,7 @@ int main()
       else if(VolumeChoice == 2){
         printf("Please enter the Litre value you want to convert: \n");
         scanf("%f",&userinputL);
-        ptr = (int*) malloc(n * sizeof(int));
+        double *ptr = (double*) malloc(n * sizeof(double*));
           if(ptr == NULL)
           {
               printf("Error! memory not allocated.");
@@ -74,7 +74,7 @@ int main()
       if(TimeChoice == 1){
           printf("Please enter the Minutes value to convert: \n");
           scanf("%f",&userinputMinutes);
-          ptr = (int*) malloc(n * sizeof(int));
+          double *ptr = (double*) malloc(n * sizeof(double*));
           if(ptr == NULL)
           {
               printf("Error! memory not allocated.");
@@ -87,7 +87,7 @@ int main()
       else if(TimeChoice == 2){
           printf("Please enter the Seconds value to convert: \n");
           scanf("%f",&userinputSeconds);
-          ptr = (int*) malloc(n * sizeof(int));
+          double *ptr = (double*) malloc(n * sizeof(double*));
           if(ptr == NULL)
           {
               printf("Error! memory not allocated.");
@@ -106,16 +106,10 @@ int main()
       printf("Enter 1 for Calories to Joules \n");
       printf("Enter 2 for Joules to Calories \n");
       scanf("%f",&EnergyChoice);
-      ptr = (int*) malloc(n * sizeof(int));
-          if(ptr == NULL)
-          {
-              printf("Error! memory not allocated.");
-              exit(0);
-          }
       if(EnergyChoice == 1){
           printf("Please enter the Calories value: \n");
           scanf("%f",&userinputCal);
-          ptr = (int*) malloc(n * sizeof(int));
+          double *ptr = (double*) malloc(n * sizeof(double*));
           if(ptr == NULL)
           {
               printf("Error! memory not allocated.");
@@ -128,7 +122,7 @@ int main()
       else if(EnergyChoice == 2) {
           printf("Please enter the Joules value: \n");
           scanf("%f",&userinputJoule);
-          ptr = (int*) malloc(n * sizeof(int));
+          double *ptr = (double*) malloc(n * sizeof(double*));
           if(ptr == NULL)
           {
               printf("Error! memory not allocated.");
