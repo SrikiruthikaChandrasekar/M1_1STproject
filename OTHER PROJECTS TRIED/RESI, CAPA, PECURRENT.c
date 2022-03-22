@@ -1,5 +1,5 @@
-C PROGRAMMING PROJECT:
-Calculator to find Resistance, Capacitance and Photoelectric current of a circuit.
+//C PROGRAMMING PROJECT:
+//Calculator to find Resistance, Capacitance and Photoelectric current of a circuit.
 
 #include<stdio.h>
 int main() {
@@ -39,10 +39,8 @@ int main() {
 }
 }
 
-Project status: Working fine.
 
 Sample output:
-
 Enter the number of Resistances : 2
 Enter Value of Each Resistance : n
  R1 : 1
