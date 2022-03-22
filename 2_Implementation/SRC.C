@@ -102,22 +102,16 @@ int main()
         printf("Please enter the correct choice. \n");
         free(ptr);
    }
-  else if(category == 'E'){
+ else if(category == 'E'){
       printf("Welcome to Energy unit conversion! \n");
       printf("Here is a list of conversations to choose from: \n");
       printf("Enter 1 for Calories to Joules \n");
       printf("Enter 2 for Joules to Calories \n");
       scanf("%f",&EnergyChoice);
-      ptr = (int*) malloc(n * sizeof(int));
-          if(ptr == NULL)
-          {
-              printf("Error! memory not allocated.");
-              exit(0);
-          }
       if(EnergyChoice == 1){
           printf("Please enter the Calories value: \n");
           scanf("%f",&userinputCal);
-          ptr = (int*) malloc(n * sizeof(int));
+          double *ptr = (double*) malloc(n * sizeof(double*));
           if(ptr == NULL)
           {
               printf("Error! memory not allocated.");
@@ -130,7 +124,7 @@ int main()
       else if(EnergyChoice == 2) {
           printf("Please enter the Joules value: \n");
           scanf("%f",&userinputJoule);
-          ptr = (int*) malloc(n * sizeof(int));
+          double *ptr = (double*) malloc(n * sizeof(double*));
           if(ptr == NULL)
           {
               printf("Error! memory not allocated.");
