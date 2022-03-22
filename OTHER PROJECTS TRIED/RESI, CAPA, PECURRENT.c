@@ -40,7 +40,7 @@ int main() {
 }
 
 
-Sample output:
+/** Sample output:
 Enter the number of Resistances : 2
 Enter Value of Each Resistance : n
  R1 : 1
@@ -59,4 +59,4 @@ Capacitance of a capacitor is: 0.400000 Farad
 
  Enter the value of E, the kinetic energy 6
  6
-The total Photoelectric current produced is : 11.000000 eV
+The total Photoelectric current produced is : 11.000000 eV */
