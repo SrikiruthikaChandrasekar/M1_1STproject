@@ -1,5 +1,5 @@
 /**
- * @file unit_conversions.h
+ * @file unit_convertors.h
  * @author Sri kiruthika c()
  * @brief Can convert units like minutes to seconds and vice versa.
  * @version 0.1
