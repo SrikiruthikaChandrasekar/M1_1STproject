@@ -1,5 +1,5 @@
-C PROGRAM PROJECT:
-NUMBER GUESSING GAME:
+//C PROGRAM PROJECT:
+
 
 #include <math.h>
 #include <stdio.h>
@@ -60,18 +60,3 @@ int main()
 }
 
 
-Sample output:
-
-Can you Guess a number between 1 and 100
-54
-Come on give me a higher number than that 
-45
-Come on give me a higher number than that 
-80
-Come on give me a higher number than that 
-90
-Come on give me a lower number than that 
-85
-Come on give me a lower number than that 
-83
-Congratulations! You guessed the number in 6 attempts!
