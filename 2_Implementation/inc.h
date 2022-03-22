@@ -12,6 +12,10 @@
 #ifndef __UNIT_CONVERSIONS_H__
 #define __UNIT_CONVERSIONS_H__
 #include <stdio.h>
+/** general purpose standard library of C programming */
+#include <stdlib.h>
+/** declares a set of functions to perform mathematical operations  */
+#include<math.h>
 
 /**
 Giving the required values along with their datatypes.
@@ -55,17 +59,39 @@ int main()
       if(VolumeChoice == 1){
           printf("Please enter the Militre value you want to convert: \n");
           scanf("%f",&userinputml);
+     /** The malloc() function reserves a block of memory of the specified number of bytes. 
+     And, it returns a pointer of void which can be casted into pointers of any form. */
+     /** Here, we have dynamically allocated the memory for n number of int. */ 
+       
+          ptr = (int*) malloc(n * sizeof(int));
+          if(ptr == NULL)
+          {
+              printf("Error! memory not allocated.");
+              exit(0);
+          }
           MililitretoLitre=  ((userinputml / 1000));
           printf("Litre: %f",MililitretoLitre);
+      /** The free() function deallocates the memory allocation pointed to by ptr. 
+      If ptr is a NULL pointer, no operation is performed. 
+      When you set the pointer to NULL after free() you can call free() on it again and no operation will be performed. */
+       
+          free(ptr);
       }
       else if(VolumeChoice == 2){
         printf("Please enter the Litre value you want to convert: \n");
         scanf("%f",&userinputL);
+        ptr = (int*) malloc(n * sizeof(int));
+        if(ptr == NULL)
+          {
+              printf("Error! memory not allocated.");
+              exit(0);
+          }
         LitretoMililitre = (userinputL*1000);
         printf("Mililitre: %f",LitretoMililitre);
       }
       else
         printf("Please enter the correct Choice. \n");
+        free(ptr);
   }
   
   else if(category == 'T') {
@@ -77,17 +103,31 @@ int main()
       if(TimeChoice == 1){
           printf("Please enter the Minutes value to convert: \n");
           scanf("%f",&userinputMinutes);
+          ptr = (int*) malloc(n * sizeof(int));
+          if(ptr == NULL)
+          {
+              printf("Error! memory not allocated.");
+              exit(0);
+          }
           Minutestoseconds = userinputMinutes * 60;
           printf("Converted the given Minutes into seconds: %f",Minutestoseconds);
+          free(ptr);
       }
       else if(TimeChoice == 2){
           printf("Please enter the Seconds value to convert: \n");
           scanf("%f",&userinputSeconds);
+          ptr = (int*) malloc(n * sizeof(int));
+          if(ptr == NULL)
+          {
+              printf("Error! memory not allocated.");
+              exit(0);
+          }
           SecondstoMinutes = (userinputSeconds * (1/60));
           printf("Converted the given Seconds to minutes: %f",SecondstoMinutes);
       }
       else
         printf("Please enter the correct choice. \n");
+        free(ptr);
    }
   else if(category == 'E'){
       printf("Welcome to Energy unit conversion! \n");
@@ -95,23 +135,42 @@ int main()
       printf("Enter 1 for Calories to Joules \n");
       printf("Enter 2 for Joules to Calories \n");
       scanf("%f",&EnergyChoice);
+      ptr = (int*) malloc(n * sizeof(int));
+          if(ptr == NULL)
+          {
+              printf("Error! memory not allocated.");
+              exit(0);
+          }
       if(EnergyChoice == 1){
           printf("Please enter the Calories value: \n");
           scanf("%f",&userinputCal);
+          ptr = (int*) malloc(n * sizeof(int));
+          if(ptr == NULL)
+          {
+              printf("Error! memory not allocated.");
+              exit(0);
+          }
            CaltoJoules= userinputCal * 4184;
           printf("Joules: %f",CaltoJoules);
+          free(ptr);
       }
       else if(EnergyChoice == 2) {
           printf("Please enter the Joules value: \n");
           scanf("%f",&userinputJoule);
+          ptr = (int*) malloc(n * sizeof(int));
+          if(ptr == NULL)
+          {
+              printf("Error! memory not allocated.");
+              exit(0);
+          }
           JoulestoCal = (userinputJoule/4184) ;
           printf("Calories: %f",JoulestoCal);
+          free(ptr);
       }
       else 
         printf("Please enter the correct choice. \n");
+        }
    }
-  return 0;
-}
 
 /**
 I have used 3 units Volume, Time and Energy.
