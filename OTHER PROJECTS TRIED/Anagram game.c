@@ -1,5 +1,4 @@
-C PROJECT:
-ANAGRAM GAME
+//C PROJECT:
 
 #include <stdio.h>
 
@@ -52,11 +51,4 @@ printf("The strings are not anagrams of each other.\n");
 return 0;
 }
 
-
-Sample output:
-Enter the first string
-pat
-Enter the second string
-tap
-The strings are anagrams of each other.
 
