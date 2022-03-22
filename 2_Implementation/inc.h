@@ -25,6 +25,7 @@ The reason for giving float instead of int is because there is no assurance that
 int main() 
 {
   char category;
+  int n, *ptr;
   float VolumeChoice;
   float TimeChoice;
   float EnergyChoice;
