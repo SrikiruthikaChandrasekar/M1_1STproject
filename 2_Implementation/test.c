@@ -123,16 +123,10 @@ and then as per the given conversion formulas it converts the one unit from anot
       printf("Enter 1 for Calories to Joules \n");
       printf("Enter 2 for Joules to Calories \n");
       scanf("%f",&EnergyChoice);
-      ptr = (int*) malloc(n * sizeof(int));
-          if(ptr == NULL)
-          {
-              printf("Error! memory not allocated.");
-              exit(0);
-          }
       if(EnergyChoice == 1){
           printf("Please enter the Calories value: \n");
           scanf("%f",&userinputCal);
-          ptr = (int*) malloc(n * sizeof(int));
+          double *ptr = (double*) malloc(n * sizeof(double*));
           if(ptr == NULL)
           {
               printf("Error! memory not allocated.");
@@ -145,7 +139,7 @@ and then as per the given conversion formulas it converts the one unit from anot
       else if(EnergyChoice == 2) {
           printf("Please enter the Joules value: \n");
           scanf("%f",&userinputJoule);
-          ptr = (int*) malloc(n * sizeof(int));
+          double *ptr = (double*) malloc(n * sizeof(double*));
           if(ptr == NULL)
           {
               printf("Error! memory not allocated.");
