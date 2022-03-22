@@ -1,5 +1,4 @@
-C PROGRAM PROJECT:
-PASSWORD GENERATOR:
+//C PROGRAM PROJECT:
 
 #include <time.h>  
 #include <stdio.h>
@@ -33,11 +32,3 @@ int main(void)
     return EXIT_SUCCESS;
 }
 
-SAMPLE OUTPUT:
-Enter the length of the password: 10
-Enter the number of passwords you want: 5
-AHCl\wNTio
-LIiRJkZ`FP
-Y[t[sdvpNa
-Sv_\HfOsxd
-XU_^KhXvWF
