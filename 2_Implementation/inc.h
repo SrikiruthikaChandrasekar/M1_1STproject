@@ -123,7 +123,7 @@ int main()
               printf("Error! memory not allocated.");
               exit(0);
           }
-          SecondstoMinutes = (userinputSeconds * (1/60));
+          SecondstoMinutes = (userinputSeconds / 60);
           printf("Converted the given Seconds to minutes: %f",SecondstoMinutes);
       }
       else
