@@ -110,7 +110,7 @@ and then as per the given conversion formulas it converts the one unit from anot
               printf("Error! memory not allocated.");
               exit(0);
           }
-          SecondstoMinutes = (userinputSeconds * (1/60));
+          SecondstoMinutes = (userinputSeconds / 60);
           printf("Converted the given Seconds to minutes: %f",SecondstoMinutes);
       }
       else
