@@ -1,8 +1,10 @@
 //C-PROGRAMMING PROJECT:
 //UNIT CONVERSIONS:
+//UNIT CONVERSIONS AND DISPLAYING THE ENTIRE THE SOURCE CODE AS OUTPUT.
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#define  DISPLAYING SOURCE CODE
 void myflush ( FILE *in )
 {
   int ch;
@@ -161,4 +163,19 @@ int main()
    }
 }
 
+FILE *fp;
+    int c;
+   
+   // opens the current file which was used as input
+    fp = fopen(__FILE__,"r");
+
+    do {
+         c = getc(fp);   // reads the character 
+         putchar(c);     // displays the character
+    }
+    while(c != EOF);  // continues in a loop until the end destination of the file is reached
+    
+    fclose(fp);
+    return 0;
+}
 
