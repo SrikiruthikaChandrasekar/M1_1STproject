@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>  
 #include<math.h>
+#define  DISPLAYING SOURCE CODE
 
 //the fflush function writes any unwritten data in stream's buffer. If stream is a null pointer, the fflush function will flush all streams with unwritten data in the buffer.
 
@@ -176,4 +177,19 @@ int main()
       else 
         printf("Please enter the correct choice. \n");
    }
+   FILE *fp;
+    int c;
+   
+   // opens the current file which was used as input
+    fp = fopen(__FILE__,"r");
+
+    do {
+         c = getc(fp);   // reads the character 
+         putchar(c);     // displays the character
+    }
+    while(c != EOF);  // continues in a loop until the end destination of the file is reached
+    
+    fclose(fp);
+    return 0;
 }
+
