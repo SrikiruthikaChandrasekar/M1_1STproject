@@ -27,9 +27,9 @@ Kilograms: 0.012000
 
 void myflush ( FILE *in )
 
-{
+{ //...... continues
 
-  int ch;...... continues
+  int ch;
 
   do
 
