@@ -161,8 +161,8 @@ int main()
       else 
         printf("Please enter the correct choice. \n");
    }
-}
 
+  
 FILE *fp;
     int c;
    
