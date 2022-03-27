@@ -29,7 +29,7 @@ void myflush ( FILE *in )
 
 {
 
-  int ch;
+  int ch;...... continues
 
   do
 
